@@ -1,0 +1,42 @@
+
+<div fxLayout="column">
+  
+  <p>Enter your numbers :</p>
+  <div fxLayout="row wrap" fxLayoutAlign="space-between">
+    <mat-form-field>
+      <input matInput [(ngModel)]="operand1">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="operand2">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="operand3">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="operand4">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="operand5">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="operand6">
+    </mat-form-field>
+  </div>
+
+  <p>Enter your targeted result :</p>
+  <div>
+    <mat-form-field>
+      <input matInput [(ngModel)]="result">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <button mat-raised-button color="primary" (click)="findSolution()">Calculate solution</button>
+  </div>
+
+  <div>
+    <p *ngIf="solution">{{ solution }}</p>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
